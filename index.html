@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Alleared">
+  <meta name="description" content="Calculator website build in HTML, CSS and JavaScript by Alleared">
+  <meta name="keywords" content="Calculator, website, HTML, CSS, JavaScript, Alleared">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+    
+    <div class="main-container">
+      <h1>Calculator</h1>
+      <div class="result-div">
+        <input id="result-display" readonly>
+      </div>
+        <div class="buttons-div">
+          
+          <button onclick="appendToDisplay('7')">7</button>
+          <button onclick="appendToDisplay('8')">8</button>
+          <button onclick="appendToDisplay('9')">9</button>
+          <button onclick="appendToDisplay('+')">&plus;</button>
+          <button onclick="appendToDisplay('4')">4</button>
+          <button onclick="appendToDisplay('5')">5</button>
+          <button onclick="appendToDisplay('6')">6</button>
+          <button onclick="appendToDisplay('-')">&minus;</button>
+          <button onclick="appendToDisplay('1')">1</button>
+          <button onclick="appendToDisplay('2')">2</button>
+          <button onclick="appendToDisplay('3')">3</button>
+          <button onclick="appendToDisplay('*')">&times;</button>
+          <button onclick="appendToDisplay('0')">0</button>
+          <button onclick="appendToDisplay('.')">.</button>
+          <button onclick="calculator()">&equals;</button>
+          <button onclick="appendToDisplay('/')">&divide;</button>
+        </div>
+        <div class="clear-button-div">
+          <button onclick="clearDisplay()" class="clear-button">Clear</button>
+        </div>
+        <div>
+          <p class="credits">Coded by Alleared</p>
+        </div>
+    </div>
+
+
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>

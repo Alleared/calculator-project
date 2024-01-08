@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ------- COLORS ---------- */
+  --BODY-BG-COLOR: lightgray;
+  --MAIN-BG-COLOR: rgb(39, 39, 39);
+  --BUTTON-BG-COLOR: rgb(70, 70, 70);
+  --BUTTON-COLOR: whitesmoke;
+  
+  /* ACTIVE BUTTON */
+  --BUTTON-ACTIVE: rgb(90, 90, 90);
+
+  /* ---------- FONT STYLES -------- */
+  --FONT-FAMILY: 'Tektur', sans-serif;
+  --FONT-SIZE: 2rem;
+
+  /* ---------- SHADOW STYLES ------- */
+  --MAIN-SHADOW: inset 3px 3px 10px whitesmoke;
+  --HOVER-SHADOW: inset 1px 1px 5px whitesmoke;
+
+}
+
+body {
+  background-color: var(--BODY-BG-COLOR);
+  font: var(--FONT-SIZE) var(--FONT-FAMILY);
+
+}
+
+button {
+  font: inherit;
+  background-color: var(--BUTTON-BG-COLOR);
+  color: var(--BUTTON-COLOR);
+  font-weight: 700;
+  box-shadow: var(--MAIN-SHADOW);
+  border: none;
+  transition: box-shadow .3s;
+  border-radius: 5px;
+}
+
+main {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1 {
+  color: whitesmoke;
+  margin: 0 2rem 1rem;
+}
+
+.main-container, .result-div, .clear-button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-container {
+  background-color: var(--MAIN-BG-COLOR);
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+.buttons-div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .5rem;
+  
+}
+
+.buttons-div button {
+  padding: .5rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+
+.result-div, .clear-button-div {
+  margin: 1rem 0;
+  gap: .5rem;
+}
+
+.clear-button {
+  width: 275px;
+  padding: .5rem 0;
+}
+
+#result-display {
+  font: inherit;
+  font-size: 3rem;
+  padding: 1rem;
+  font-weight: 700;
+  border: none;
+  box-shadow: inset 3px 3px 3px var(--MAIN-BG-COLOR);;
+  border-radius: 3px;
+  width: 80%;
+  text-align: end;
+}
+
+.credits {
+  font-size: 1rem;
+  color: var(--BUTTON-COLOR);
+}
+
+/* HOVER STYLES */
+
+button:hover {
+  box-shadow: var(--HOVER-SHADOW);
+}
+
+button:active, input:active {
+  background-color: var(--BUTTON-ACTIVE);
+}
+
+@media (max-width: 780px) {
+  .buttons-div, #result-display {
+    width: 100%;
+  }
+
+
+}
